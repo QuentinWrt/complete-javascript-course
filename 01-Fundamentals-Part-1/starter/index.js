@@ -119,3 +119,80 @@
 
 // const fav = prompt("What's your favorite number"); => //prompt() renvoie une String
 // console.log(fav);
+
+//------------------------------------------------
+// Logique Boolean
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// // if (shoodDrive) {
+// //   console.log("She is able to drive !");
+// // } else {
+// //   console.log("Let somone drive...");
+// // }
+
+// const isTired = false; // C
+
+// const shoodDrive = hasDriversLicense && hasGoodVision && !isTired;
+
+// console.log(hasDriversLicense && hasGoodVision && !isTired);
+
+// if (shoodDrive) {
+//   console.log("She is able to drive !");
+// } else {
+//   console.log("Let somone drive...");
+// }
+
+//-----------------------------------
+// Coding challenge
+
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+
+// if (scoreDolphins > scoreKoalas) {
+//   console.log(`Dolphin win ! (${scoreDolphins})`);
+// } else if (scoreDolphins === scoreKoalas) {
+//   console.log("Equality");
+// } else {
+//   console.log(`Koala win ! (${scoreKoalas})`);
+// }
+
+// const day = "sunday";
+
+// switch (day) {
+//   case "monday": // => day === 'monday'
+//     console.log("Oh no ... it's monday");
+//     console.log("Go to school");
+//     break;
+//   case "tuesday":
+//     console.log("kjrbfui");
+//     break;
+//   case "wednesday":
+//   case "thursday":
+//     console.log("middle week");
+//   case "friday":
+//     console.log("friday then !");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("week end !");
+//     break;
+//   default:
+//     console.log("not a day of the week !");
+// }
+
+//-------------------------------
+//ternaire
+
+// => permet d'aller plus vite que les 'if / else'
+
+const age = 18;
+age >= 18 ? console.log("tu est vieux") : console.log("trop jeune pour moi");
+
+let drink = age >= 18 ? "alcool" : "watter";
+console.log(`I like to drink ${drink}`);
