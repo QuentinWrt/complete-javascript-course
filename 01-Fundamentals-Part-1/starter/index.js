@@ -191,8 +191,32 @@
 
 // => permet d'aller plus vite que les 'if / else'
 
-const age = 18;
-age >= 18 ? console.log("tu est vieux") : console.log("trop jeune pour moi");
+// const age = 18;
+// age >= 18 ? console.log("tu est vieux") : console.log("trop jeune pour moi");
 
-let drink = age >= 18 ? "alcool" : "watter";
-console.log(`I like to drink ${drink}`);
+// let drink = age >= 18 ? "alcool" : "watter";
+// console.log(`I like to drink ${drink}`);
+
+//-------------------------------
+// Coding challenge
+
+// const bill = 40;
+// version ternaire + compacte et + performante
+// const tips = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+
+// version de base + claire mais moins performante
+// // if (bill >= 50 && bill <= 300) {
+// //   tips = bill * 0.15;
+// //   console.log(
+// //     `The tips is ${tips}$ and the bill ${bill}$ total ${bill + tips}$`
+// //   );
+// // } else {
+// //   tips = bill * 0.2;
+// //   console.log(
+// //     `the tips is ${tips}$ and the bill ${bill}$ total ${bill + tips}$`
+// //   );
+// // }
+
+// console.log(
+//   `The tips is ${tips}$ the bill is ${bill}$ and the total ${bill + tips}$`
+// );
