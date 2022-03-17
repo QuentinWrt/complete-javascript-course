@@ -334,3 +334,35 @@
 //   console.log(rdm);
 //   rdm = Math.trunc(Math.random() * 6) + 1;
 // }
+
+//---------------------------
+// Coding challenge
+function calcTip(bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else {
+    return bill * 0.2;
+  }
+}
+
+const bills = [125, 555, 44];
+const tips = [];
+const total = [];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+}
+
+for (let i = 0; i < bills.length; i++) {
+  total.push(bills[i] + tips[i]);
+}
+
+for (let i = 0; i < total.length; i++) {
+  console.log(
+    `The bill is ${bills[i]}, tips is ${tips[i]} and total ${total[i]}`
+  );
+}
+
+console.log(bills);
+console.log(tips);
+console.log(total);
