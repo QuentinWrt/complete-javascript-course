@@ -144,32 +144,193 @@
 
 //------------------
 // coding challenge
-function calcTip(bill) {
-  if (bill >= 50 && bill <= 300) {
-    return bill * 0.15;
-  } else {
-    return bill * 0.2;
-  }
-}
+// function calcTip(bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else {
+//     return bill * 0.2;
+//   }
+// }
 
-const bills = [125, 555, 44];
-const tips = [];
-const total = [];
+// const bills = [125, 555, 44];
+// const tips = [];
+// const total = [];
 
-for (let i = 0; i < bills.length; i++) {
-  tips.push(calcTip(bills[i]));
-}
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calcTip(bills[i]));
+// }
 
-for (let i = 0; i < bills.length; i++) {
-  total.push(bills[i] + tips[i]);
-}
+// for (let i = 0; i < bills.length; i++) {
+//   total.push(bills[i] + tips[i]);
+// }
 
-for (let i = 0; i < total.length; i++) {
-  console.log(
-    `The bill is ${bills[i]}, tips is ${tips[i]} and total ${total[i]}`
-  );
-}
+// for (let i = 0; i < total.length; i++) {
+//   console.log(
+//     `The bill is ${bills[i]}, tips is ${tips[i]} and total ${total[i]}`
+//   );
+// }
 
-console.log(bills);
-console.log(tips);
-console.log(total);
+// console.log(bills);
+// console.log(tips);
+// console.log(total);
+
+//--------------------------
+// Object
+// const quentin = {
+//   firstname: "Quentin",
+//   lastname: "Warth",
+//   birthYear: 2002,
+//   job: "student",
+//   friends: ["Sacha", "Isaie", "Matteo"],
+//   hasDriverLicense: true,
+
+//   calcAge: function () {
+//     this.age = 2022 - this.birthYear; // => créé une nouvelle prop
+//     return this.age;
+//   },
+
+//   sumUp: function () {
+//     return console.log(
+//       `${this.firstname} ${this.lastname} is ${this.age} and was born in ${
+//         this.birthYear
+//       }. He is a ${this.job}. He has ${this.friends.length} friends ${
+//         this.friends
+//       }. He has ${this.hasDriverLicense ? "a" : "no"} driver's license.`
+//     );
+//   },
+// };
+
+// console.log(quentin);
+
+// console.log(quentin.firstname); // => ne peut pointer que un objet précis qui existe
+// console.log(quentin["lastname"]); // => permet de le faire avec des expressions
+
+// const nameKey = "name";
+// console.log(quentin[`first${nameKey}`]);
+// console.log(quentin[`last${nameKey}`]);
+
+// const nameKey = prompt("What do you want to know ?");
+// console.log(quentin[`${nameKey}`]);
+
+// if (quentin[nameKey]) {
+//   console.log(quentin[nameKey]);
+// } else {
+//   console.log("This not exist");
+// }
+
+// quentin.location = "France";
+// quentin["twitter"] = "@quentin_wrt";
+
+// console.log(quentin.location + " " + quentin.twitter);
+
+// const friend = prompt("Enter Quentin's best firend");
+// quentin["bestFriends"] = friend;
+
+// console.log(
+//   `${quentin.firstname} has ${quentin.friends.length} friends and his best friend is ${quentin.friends[0]}`
+// );
+
+// console.log(quentin);
+
+// console.log(quentin.calcAge());
+
+// console.log(quentin["calcAge"](quentin.birthYear)); // => peut etre cool si l'utilisateur veut choisir une fonction dans l'objet
+
+// pointer une variable d'un objet dans un objet == 'this'
+
+// console.log(quentin.age);
+
+// console.log(quentin.sumUp());
+
+//---------------------
+// Coding challenge
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height);
+//     return this.BMI;
+//   },
+// };
+
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+
+//   calcBMI: function () {
+//     return (this.BMI = this.mass / (this.height * this.height));
+//   },
+// };
+
+// console.log(
+//   `${
+//     john.calcBMI() > mark.calcBMI()
+//       ? "John's BMI (" +
+//         john.BMI +
+//         ") is higher than Mark's (" +
+//         mark.BMI +
+//         ") !"
+//       : "Mark's (" + mark.BMI + ") is higher than John's (" + john.BMI + ") !"
+//   }`
+// );
+
+//-----------------------
+// Loop
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`Lifting weights repetition ${i}`);
+// }
+
+// const quentinArray = [
+//   "Quentin",
+//   "Warth",
+//   2022 - 2002,
+//   "teacher",
+//   ["Sacha", "Isaie", "Matteo"],
+//   true,
+// ];
+
+// console.log("------ ONLY STRINGS --------");
+// for (let i = 0; i < quentinArray.length; i++) {
+//   if (typeof quentinArray[i] !== "string") continue;
+//   console.log(quentinArray[i]);
+// }
+
+// console.log("------ BREAK NUMBER NUMBER --------");
+// for (let i = 0; i < quentinArray.length; i++) {
+//   if (typeof quentinArray[i] === "number") break;
+//   console.log(quentinArray[i]);
+// }
+
+// for (let i = quentinArray.length - 1; i >= 0; i--) {
+//   console.log(quentinArray[i]);
+// }
+
+// for (let exercice = 1; exercice <= 3; exercice++) {
+//   for (let rep = 1; rep <= 5; rep++) {
+//     console.log(`Exercice ${exercice}, rep ${rep}`);
+//   }
+// }
+
+// while
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`Lifting weights repetition ${i}`);
+// }
+
+// let rep = 0;
+// while (rep <= 10) {
+//   console.log(rep);
+//   rep++;
+// }
+
+// let rdm = Math.trunc(Math.random() * 6) + 1;
+// console.log(rdm);
+
+// while (rdm !== 6) {
+//   console.log(rdm);
+//   rdm = Math.trunc(Math.random() * 6) + 1;
+// }
